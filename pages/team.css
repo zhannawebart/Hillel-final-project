@@ -296,6 +296,11 @@ body {
   transition: 0.3s;
 }
 
+.tel-style {
+  color: #46466e;
+  font-weight: 700;
+}
+
 .copy {
   color: var(--grey-text);
 }
