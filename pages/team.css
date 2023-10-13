@@ -1,5 +1,5 @@
 :root {
-  --container-width: 1320px;
+  --container-width: 1600px;
   --basic-space: 1rem;
   --text-size: 16px;
   --text-color: #000000;
@@ -56,7 +56,7 @@ body {
 
 .smaller-container {
   width: 100%;
-  max-width: 1080px;
+  max-width: 1360px;
   /*padding-left: var(--basic-space);
         padding-right: var(--basic-space);*/
   margin-left: auto;
@@ -379,6 +379,87 @@ body {
 
   .burger {
     display: block;
+  }
+
+  .header-item1 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-item2 {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5f5fa;
+    margin-top: -50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
+  .lang-buttons {
+    margin-left: 10px;
+  }
+
+  .text-style2 {
+    margin-right: 15px;
+  }
+
+  .nav,
+  .text-style1,
+  .dot,
+  .facebook-mobile {
+    display: none;
+  }
+
+  /*---header end ---*/
+
+  /*----burger-menu----*/
+
+  .burger {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    position: relative;
+    z-index: 7;
+  }
+  .nav {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    z-index: -5;
+  }
+  .nav.active {
+    z-index: 5;
+    background-color: rgba(50, 50, 50, 0.85);
+  }
+  .nav .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    height: 100%;
+    transition: all 0.3s linear;
+    transform: translateY(0);
+    padding-top: 64px;
+  }
+  .nav.active .menu {
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    padding: 7px 100px;
+    background-color: #f5f5fa;
+    border-radius: 12px;
+  }
+  .nav-link:hover {
+    color: #f0145a;
+    text-decoration: none;
   }
 
   .header-item1 {
