@@ -46,6 +46,17 @@ body {
   position: relative;
 }
 
+.bg-gradient {
+  border-radius: 0px 0px 12px 12px;
+  background: linear-gradient(
+    229deg,
+    #323264 11.93%,
+    #323264 57.17%,
+    #643e72 87.46%
+  );
+  color: #ffffff;
+}
+
 .display-flex {
   display: flex;
 }
@@ -112,6 +123,10 @@ body {
 .header {
   background-color: transparent;
   padding-top: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .page-name {
@@ -169,6 +184,108 @@ body {
   color: var(--accent);
   text-decoration: underline;
   transition: 0.3s;
+}
+
+/*-----MAIN SECTION------*/
+
+.main-section {
+  min-height: 100vh;
+  background: url("./images/h-symbol-mainscreen.png") no-repeat center/contain;
+}
+
+.main-section .content-block {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-block h1 {
+  color: #fff;
+  font-size: 2.38rem;
+  font-weight: 700;
+}
+
+.content-block .hover-scroll-arrow svg:hover circle {
+  stroke: var(--accent);
+  transition: 0.3s;
+}
+.content-block .hover-scroll-arrow svg:hover path {
+  stroke: var(--accent);
+  transition: 0.3s;
+}
+
+/*----COMPANY LOGOS SECTION----*/
+
+.company-logos-section h3 {
+  font-size: 0.88rem;
+  color: #323264;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.company-logos-section .logos-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1700px;
+  margin: 0 auto; /*верх и низ без отступов, справа и слева - auto, т.е.по центру контейнер будет*/
+}
+
+.company-logos-section .logos-wrapper .logo-item {
+  padding: 1rem;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-logos-section .logos-wrapper .logo-item img {
+  max-height: 100%;
+  max-width: 70%;
+}
+
+.bg-blue {
+  background-color: #1c4280;
+  border-radius: 12px 0 0 0;
+}
+.bg-dark-blue {
+  background-color: #143646;
+}
+.bg-orange {
+  background-color: #f48b30;
+}
+.bg-violet {
+  background-color: #9e4dc3;
+  border-radius: 0 12px 0 0;
+}
+.bg-gray1 {
+  background-color: #e2e2e4;
+}
+.bg-gray2 {
+  background-color: #eaeaea;
+  border-radius: 0 0 0 12px;
+}
+.bg-red {
+  background-color: #c71c36;
+}
+.bg-light {
+  background-color: #dcf3f9;
+}
+.bg-dark-violet {
+  background-color: #282240;
+}
+.bg-indigo {
+  background-color: #1d4568;
+}
+.bg-black {
+  background-color: #000000;
+  border-radius: 0 0 12px 0;
 }
 
 /*----SERVICE CARDS SECTION----*/
@@ -325,6 +442,15 @@ hr {
   .smaller-container {
     max-width: 1080px;
   }
+
+  /*----company-logos-section----*/
+  .bg-blue,
+  .bg-violet,
+  .bg-gray,
+  .bg-black {
+    border-radius: 0 0 0 0;
+  }
+
   /*---service-card-section----*/
   .single-card {
     max-width: 420px;
@@ -373,6 +499,11 @@ hr {
   .mobile-flex-start {
     display: flex;
     justify-content: flex-start;
+  }
+
+  /*----company-logos-section----*/
+  .company-logos-section .logos-wrapper {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   /*---service-card-section----*/
@@ -492,6 +623,13 @@ hr {
   .nav-link:hover {
     color: #f0145a;
     text-decoration: none;
+  }
+
+  /*----company-logos-section----*/
+  .company-logos-section .logos-wrapper {
+    grid-template-columns: 100%;
+    max-height: calc(120px * 6); /*видим 6 лого-карточек*/
+    overflow-y: auto; /*остальные лого-карточки будут скролиться*/
   }
 
   /*---service-card-section----*/
