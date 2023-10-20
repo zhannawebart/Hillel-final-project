@@ -46,7 +46,7 @@ body {
   position: relative;
 }
 
-.bg-gradient {
+.bg-gradient-box {
   border-radius: 0px 0px 12px 12px;
   background: linear-gradient(
     229deg,
@@ -57,7 +57,7 @@ body {
   color: #ffffff;
 }
 
-.display-flex {
+.display-flex-pos {
   display: flex;
 }
 
@@ -71,7 +71,7 @@ body {
   flex-direction: column;
 }
 
-.align-items {
+.align-items-position {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -82,18 +82,19 @@ body {
   justify-content: flex-end;
 }
 
-.align-items .text-style1 {
-  color: var(--grey-text);
-}
 .align-items .text-style2 {
-  color: var(--grey-text);
+  color: #ffffff;
   font-weight: 700;
+}
+
+.align-items .text-style2 {
+  color: #ffffff;
 }
 
 .dot {
   width: 6px;
   height: 6px;
-  background-color: var(--grey-text);
+  background-color: #e6e6f0;
   border-radius: 50%;
 }
 
@@ -129,16 +130,6 @@ body {
   width: 100%;
 }
 
-.page-name {
-  color: #323264;
-  font-size: 2.3rem;
-  margin-left: 4px;
-}
-
-.slash {
-  margin-left: 4px;
-}
-
 .burger {
   display: none;
 }
@@ -149,8 +140,9 @@ body {
 }
 
 .lang-btn {
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  color: var(--grey-text);
+  color: #ffffff;
   font-size: 0.75rem;
   letter-spacing: 1px;
   font-weight: 700;
@@ -164,7 +156,10 @@ body {
   transition: 0.3s;
 }
 
-.header-facebook:hover path {
+.facebook-hover path {
+  fill: #ffffff;
+}
+.facebook-hover:hover path {
   fill: var(--accent);
   transition: 0.3s;
 }
@@ -174,16 +169,23 @@ body {
   gap: 16px;
 }
 
-.nav-link {
-  color: #24a3ff;
+.menu-nav-link {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
   text-align: right;
   font-size: var(--text-size);
   font-weight: 700;
 }
-.nav-link:hover {
+.menu-nav-link:hover {
   color: var(--accent);
   text-decoration: underline;
   transition: 0.3s;
+}
+
+.text-style1,
+.text-style2 {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
 }
 
 /*-----MAIN SECTION------*/
@@ -202,9 +204,11 @@ body {
 }
 
 .content-block h1 {
+  font-family: "Montserrat", sans-serif;
   color: #fff;
   font-size: 2.38rem;
   font-weight: 700;
+  margin-top: 80px;
 }
 
 .content-block .hover-scroll-arrow svg:hover circle {
@@ -215,10 +219,106 @@ body {
   stroke: var(--accent);
   transition: 0.3s;
 }
+.content-block .hover-scroll-arrow {
+  margin-bottom: 30px;
+}
+
+/*-----SECOND SECTION TABS------*/
+
+/*vertical tab line:*/
+.second-section {
+  margin-top: 60px;
+}
+
+.content-block {
+  display: flex;
+  justify-content: center;
+}
+
+.second-section .tab-line {
+  width: 4px;
+  min-width: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-left: 40px;
+  margin-right: 60px;
+  align-self: stretch;
+}
+
+.tab-btn-style {
+  font-family: "Montserrat", sans-serif;
+  color: var(--grey-text, #b3b3ba);
+  font-size: 2.38rem;
+  font-weight: 700;
+  text-align: end;
+}
+
+.nav-link:hover {
+  background: var(
+    --gradient-text-red-reversed,
+    linear-gradient(90deg, #ef8080 0.84%, #f0145a 99.96%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.3s;
+}
+/*.active {
+  background: var(
+    --gradient-text-red-reversed,
+    linear-gradient(90deg, #ef8080 0.84%, #f0145a 99.96%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}*/
+
+.tab-pane {
+  max-width: 860px;
+  font-family: "Montserrat", sans-serif;
+}
+.tab-pane h3 {
+  font-size: 1.88rem;
+  font-weight: 700;
+}
+.tab-pane .tab-text-style {
+  font-size: 1.19rem;
+  font-weight: 400;
+  color: #ffffff !important;
+}
+
+/*-----THIRD SECTION ICONS BLOCK---*/
+
+.icons-title {
+  margin-top: 60px;
+}
+
+.icon-cards-wrapper {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.single-icon-card h3 {
+  color: #24a3ff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.38rem;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.single-icon-card p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6; /* 162.5% */
+}
 
 /*----COMPANY LOGOS SECTION----*/
 
 .company-logos-section h3 {
+  font-family: "Montserrat", sans-serif;
   font-size: 0.88rem;
   color: #323264;
   font-style: normal;
@@ -297,6 +397,7 @@ body {
 }
 
 .subtitle {
+  font-family: "Montserrat", sans-serif;
   color: #24a3ff;
   font-size: 0.87rem;
   font-weight: 700;
@@ -310,6 +411,7 @@ span {
 }
 
 .service-title-style {
+  font-family: "Montserrat", sans-serif;
   background: linear-gradient(90deg, #f0145a 0.84%, #ef8080 99.96%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -325,20 +427,23 @@ span {
   margin-top: 30px;
 }
 
-.single-card {
+.single-card-item {
   border-radius: 8px;
   background-color: var(--bg-basic-color);
   height: 430px;
 }
-.card-content {
+.card-content-pad {
   padding: 30px;
 }
-.card-content h4 {
+.card-content-pad .card-title {
+  font-family: "Montserrat", sans-serif;
   color: #24a3ff;
   font-weight: 700;
+  font-size: 1rem;
   margin-bottom: 15px;
 }
 .data {
+  font-family: "Montserrat", sans-serif;
   color: var(--grey-text);
   font-size: 0.75rem;
   font-weight: 700;
@@ -352,10 +457,11 @@ hr {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-.card-description {
+.card-description-style {
   color: var(--text-color);
   font-size: 0.88rem;
   line-height: 1.38;
+  font-family: "Montserrat", sans-serif;
 }
 
 /*-----FOOTER-------*/
@@ -381,9 +487,11 @@ hr {
   color: #323264;
   font-size: var(--text-size);
   font-weight: 400;
+  font-family: "Montserrat", sans-serif;
 }
 
 .map-link {
+  font-family: "Montserrat", sans-serif;
   color: #24a3ff;
   font-size: 0.75rem;
   font-weight: 700;
@@ -397,9 +505,19 @@ hr {
   gap: 10px;
 }
 
-.facebook-hover:hover path {
+.facebook-footer path {
+  fill: #24a3ff;
+}
+.facebook-footer:hover path {
   fill: var(--accent);
   transition: 0.3s;
+}
+
+.dot-footer {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #b3b3ba;
 }
 
 .facebook-block {
@@ -418,6 +536,7 @@ hr {
 .e-mail {
   color: #24a3ff;
   font-weight: 700;
+  font-family: "Montserrat", sans-serif;
 }
 .e-mail:hover,
 .map-link:hover {
@@ -428,10 +547,12 @@ hr {
 .tel-style {
   color: #46466e;
   font-weight: 700;
+  font-family: "Montserrat", sans-serif;
 }
 
 .copy {
   color: var(--grey-text);
+  font-family: "Montserrat", sans-serif;
 }
 
 @media (max-width: 1440px) {
@@ -443,20 +564,25 @@ hr {
     max-width: 1080px;
   }
 
+  /*----second-section-tabs:----*/
+  .tab-pane {
+    max-width: 580px;
+  }
+
   /*----company-logos-section----*/
   .bg-blue,
   .bg-violet,
-  .bg-gray,
+  .bg-gray2,
   .bg-black {
     border-radius: 0 0 0 0;
   }
 
   /*---service-card-section----*/
-  .single-card {
+  .single-card-item {
     max-width: 420px;
     height: 450px;
   }
-  .single-card img {
+  .single-card-item img {
     width: 100%;
   }
 }
@@ -468,16 +594,20 @@ hr {
   }
 
   /*---service-card-section----*/
-  .single-card {
+  .single-card-item {
     max-width: 420px;
     height: 556px;
   }
-  .single-card img {
+  .single-card-item img {
     width: 100%;
   }
 }
 
 @media (max-width: 768px) {
+  .main-section {
+    background-size: cover; /*расположение h символа на весь экран*/
+  }
+
   /*----header----*/
 
   .header-grid-wrapper {
@@ -499,6 +629,53 @@ hr {
   .mobile-flex-start {
     display: flex;
     justify-content: flex-start;
+  }
+
+  /*----second-section-tabs:----*/
+  .second-section .wrapper {
+    flex-direction: column;
+  }
+
+  .second-section .tab-line {
+    width: 100%;
+    height: 4px;
+    margin: 60px 0;
+  }
+
+  /*.wrapper .flex-row-mobile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    /*position: absolute;
+    transform: translateX(6px);
+    overflow-x: auto;
+    max-width: calc(100vw) !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }*/
+
+  .tab-pane {
+    max-width: 648px;
+  }
+
+  /*.second-section .nav-pills {
+    position: absolute;
+    transform: translateX(6px);
+    overflow-x: auto;
+    max-width: calc(100vw) !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }*/
+
+  .second-section .nav-pills .nav-link {
+    min-width: 150px;
+  }
+
+  /*-----third section-icons block---*/
+  .icon-cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
   }
 
   /*----company-logos-section----*/
@@ -530,14 +707,21 @@ hr {
 }
 
 @media (max-width: 375px) {
+  .main-section,                   /*позиция h символа*/
+  .main-section .content-block {
+    height: initial;
+    min-height: initial;
+    aspect-ratio: 1/1.6;
+  }
+
+  .content-block h1 {
+    max-width: 300px;
+    text-align: center;
+    margin-top: 80px;
+  }
+
   .img-logo {
     max-width: 69px;
-  }
-  .img-slash {
-    max-width: 12px;
-  }
-  .page-name {
-    font-size: 1.25rem;
   }
 
   .burger {
@@ -547,12 +731,15 @@ hr {
   .header-item1 {
     display: flex;
     justify-content: space-between;
+    margin-top: 12px;
   }
 
   .header-item2 {
+    position: absolute;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: #f5f5fa;
+    background-color: rgba(245, 245, 250, 0.2);
     margin-top: -50px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -568,7 +755,7 @@ hr {
     margin-right: 15px;
   }
 
-  .nav,
+  .nav-menu,
   .text-style1,
   .dot,
   .facebook-mobile-none {
@@ -587,7 +774,7 @@ hr {
     position: relative;
     z-index: 7;
   }
-  .nav {
+  .nav-menu {
     position: fixed;
     inset: 0;
     width: 100%;
@@ -595,11 +782,11 @@ hr {
     padding: 0.5rem 1rem;
     z-index: -5;
   }
-  .nav.active {
+  .nav-menu.active {
     z-index: 5;
     background-color: rgba(50, 50, 50, 0.85);
   }
-  .nav .menu {
+  .nav-menu .menu {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -609,20 +796,39 @@ hr {
     height: 100%;
     transition: all 0.3s linear;
     transform: translateY(0);
-    padding-top: 64px;
+    padding-top: 150px;
   }
-  .nav.active .menu {
+  .nav-menu.active .menu {
     transform: translateY(0);
   }
 
-  .nav-link {
+  .menu-nav-link {
     padding: 7px 100px;
     background-color: #f5f5fa;
     border-radius: 12px;
+    color: #24a3ff;
   }
-  .nav-link:hover {
+  .menu-nav-link:hover {
     color: #f0145a;
     text-decoration: none;
+  }
+
+  /*----second-section-tabs:----*/
+  .second-section {
+    margin-top: 30px;
+  }
+  .second-section .tab-line {
+    margin: 30px 0;
+  }
+
+  .tab-btn-style {
+    font-size: 1.88rem;
+  }
+
+  /*-----third section-icons block---*/
+  .icon-cards-wrapper {
+    grid-template-columns: 100%;
+    gap: 30px;
   }
 
   /*----company-logos-section----*/
@@ -641,7 +847,7 @@ hr {
     grid-template-columns: 100%;
   }
 
-  .single-card {
+  .single-card-item {
     max-width: 420px;
     height: 100%;
   }
