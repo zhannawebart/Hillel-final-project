@@ -100,12 +100,12 @@ body {
 
 /*-----HEADER-------*/
 
+/*aut0 - чтобы слова меню не сжимались при сужении экрана , а контейнер нормально сужался*/
 .header-grid-wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, 1fr);
   gap: 16px;
-  /*margin-bottom: 60px;*/
 }
 
 .header-item1 {
@@ -186,6 +186,11 @@ body {
 .text-style2 {
   font-family: "Montserrat", sans-serif;
   color: #ffffff;
+  margin-bottom: 0rem;
+}
+
+.text-style2 {
+  font-weight: 700;
 }
 
 /*-----MAIN SECTION------*/
@@ -393,7 +398,6 @@ body {
 .service-card-section {
   background-color: var(--footer-bg-color);
   padding-top: 30px;
-  padding-bottom: 40px;
 }
 
 .subtitle {
@@ -473,7 +477,7 @@ hr {
 
 .footer-line {
   height: 2px;
-  background: #e6e6f0;
+  background-color: #babacb;
   border: none;
   margin-bottom: 30px;
 }
@@ -487,6 +491,7 @@ hr {
   font-size: var(--text-size);
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
+  margin-bottom: 0rem;
 }
 
 .map-link {
@@ -698,7 +703,7 @@ hr {
   .main-container,
   .smaller-container {
     padding-left: 30px;
-    padding-right: 30px;
+    padding-right: 60px;
   }
 
   .main-section,                   /*позиция h символа*/

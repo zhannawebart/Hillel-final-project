@@ -109,10 +109,9 @@ body {
 
 .header-grid-wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, 1fr);
   gap: 16px;
-  /*margin-bottom: 60px;*/
 }
 
 .header-item1 {
@@ -254,7 +253,7 @@ body {
 }
 
 .services-aria-block .red-dot {
-  width: 6px;
+  min-width: 6px;
   height: 6px;
   background-color: var(--accent);
   border-radius: 50%;
