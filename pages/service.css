@@ -36,6 +36,17 @@ body {
   background-color: var(--basic-color);
 }
 
+.bg-gradient-box {
+  border-radius: 0px 0px 12px 12px;
+  background: linear-gradient(
+    229deg,
+    #323264 11.93%,
+    #323264 57.17%,
+    #643e72 87.46%
+  );
+  color: #ffffff;
+}
+
 .main-container {
   width: 100%;
   max-width: calc(var(--container-width) + var(--basic-space) * 2);
@@ -123,7 +134,7 @@ body {
 }
 
 .page-name {
-  color: #323264;
+  color: #ffffff;
   font-size: 2.3rem;
   margin-left: 4px;
 }
@@ -143,7 +154,7 @@ body {
 
 .lang-btn {
   text-transform: uppercase;
-  color: var(--grey-text);
+  color: #ffffff;
   font-size: 0.75rem;
   letter-spacing: 1px;
   font-weight: 700;
@@ -153,11 +164,13 @@ body {
 }
 .lang-btn:hover {
   background-color: var(--accent);
-  color: #ffffff;
   transition: 0.3s;
 }
 
-.header-facebook:hover path {
+.align-items .header-facebook path {
+  fill: #ffffff;
+}
+.align-items .header-facebook:hover path {
   fill: var(--accent);
   transition: 0.3s;
 }
@@ -168,7 +181,7 @@ body {
 }
 
 .nav-link {
-  color: #24a3ff;
+  color: #ffffff;
   text-align: right;
   font-size: var(--text-size);
   font-weight: 700;
@@ -179,9 +192,98 @@ body {
   transition: 0.3s;
 }
 
+.align-items .text-style1 {
+  color: #ffffff;
+}
+.align-items .text-style2 {
+  color: #ffffff;
+}
+
+/*----IT AND E-COMMERCE SECTION----*/
+
+.e-commerce-position {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.text-description {
+  color: #fff;
+  font-size: 1.19rem;
+  line-height: 1.88;
+}
+
+.consultation-btn {
+  display: inline-block;
+  padding: 18px 30px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 12px;
+  background-color: #24a3ff;
+  box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.5);
+}
+.consultation-btn:hover {
+  background-color: #0085ff;
+}
+.consultation-btn:active {
+  background-color: #006ccf;
+}
+
+/*----SERVICE AREA SECTION----*/
+
+.service-aria {
+  padding-bottom: 60px;
+}
+
+.service-line {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.5);
+  margin-bottom: 30px;
+}
+
+.h3-title {
+  font-size: 1.38rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.services-aria-block .red-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  margin-top: 12px;
+}
+
+.services-aria-block {
+  display: grid;
+  grid-template-columns: repeat(2, 650px);
+  column-gap: 60px;
+  row-gap: 15px;
+}
+
+.text-description2 {
+  color: #fff;
+  font-size: 1.13rem;
+  line-height: 1.63;
+}
+
+.row-pos-dot-text {
+  display: flex;
+  column-gap: 8px;
+  align-items: flex-start;
+}
+
 /*----SERVICE CARDS SECTION----*/
 
 .service-card-section {
+  margin-top: 60px;
   background-color: var(--footer-bg-color);
   padding-top: 30px;
   /*padding-bottom: 30px;*/
@@ -219,7 +321,7 @@ span {
 .single-card {
   border-radius: 8px;
   background-color: var(--bg-basic-color);
-  height: 430px;
+  /*height: 430px;*/
 }
 .card-content {
   padding: 30px;
@@ -334,28 +436,30 @@ hr {
     max-width: 1080px;
   }
   /*---service-card-section----*/
-  .single-card {
-    max-width: 420px;
-    height: 450px;
-  }
+  /*.single-card {
+    /*max-width: 420px;*/
+  /*height: 450px;
+  }*/
   .single-card img {
     width: 100%;
+  }
+
+  /*----SERVICE AREA SECTION----*/
+  .services-aria-block {
+    grid-template-columns: repeat(2, 510px);
   }
 }
 
 @media (max-width: 1024px) {
   .main-container,
   .smaller-container {
-    max-width: 904px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 
-  /*---service-card-section----*/
-  .single-card {
-    max-width: 420px;
-    height: 556px;
-  }
-  .single-card img {
-    width: 100%;
+  /*----SERVICE AREA SECTION----*/
+  .services-aria-block {
+    grid-template-columns: repeat(2, 422px);
   }
 }
 
@@ -383,6 +487,15 @@ hr {
     justify-content: flex-start;
   }
 
+  /*----SERVICE AREA SECTION----*/
+  .services-aria-block {
+    grid-template-columns: 100%;
+  }
+
+  .e-commerce-position {
+    margin-bottom: 30px;
+  }
+
   /*---service-card-section----*/
   .service-cards {
     grid-template-columns: repeat(2, 1fr);
@@ -407,6 +520,12 @@ hr {
 }
 
 @media (max-width: 375px) {
+  .main-container,
+  .smaller-container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
   .img-logo {
     max-width: 69px;
   }
@@ -424,17 +543,20 @@ hr {
   .header-item1 {
     display: flex;
     justify-content: space-between;
+    margin-top: -10px;
+    margin-left: -1rem;
+    margin-right: -1rem;
   }
 
   .header-item2 {
     display: flex;
     justify-content: space-between;
-    background-color: #f5f5fa;
+    background-color: rgba(245, 245, 250, 0.2);
     margin-top: -50px;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-left: -1rem;
-    margin-right: -1rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
   }
 
   .lang-buttons {
@@ -486,7 +608,7 @@ hr {
     height: 100%;
     transition: all 0.3s linear;
     transform: translateY(0);
-    padding-top: 64px;
+    padding-top: 150px;
   }
   .nav.active .menu {
     transform: translateY(0);
@@ -496,10 +618,17 @@ hr {
     padding: 7px 100px;
     background-color: #f5f5fa;
     border-radius: 12px;
+    color: #24a3ff;
   }
   .nav-link:hover {
     color: #f0145a;
     text-decoration: none;
+  }
+
+  /*---e-commerce-section:----*/
+  .e-commerce-position {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   /*---service-card-section----*/

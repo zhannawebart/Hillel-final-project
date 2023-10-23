@@ -430,7 +430,6 @@ span {
 .single-card-item {
   border-radius: 8px;
   background-color: var(--bg-basic-color);
-  height: 430px;
 }
 .card-content-pad {
   padding: 30px;
@@ -578,10 +577,6 @@ hr {
   }
 
   /*---service-card-section----*/
-  .single-card-item {
-    max-width: 420px;
-    height: 450px;
-  }
   .single-card-item img {
     width: 100%;
   }
@@ -590,16 +585,9 @@ hr {
 @media (max-width: 1024px) {
   .main-container,
   .smaller-container {
-    max-width: 904px;
-  }
-
-  /*---service-card-section----*/
-  .single-card-item {
-    max-width: 420px;
-    height: 556px;
-  }
-  .single-card-item img {
-    width: 100%;
+    /*max-width: 904px;*/
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }
 
@@ -707,6 +695,12 @@ hr {
 }
 
 @media (max-width: 375px) {
+  .main-container,
+  .smaller-container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
   .main-section,                   /*позиция h символа*/
   .main-section .content-block {
     height: initial;
@@ -722,10 +716,6 @@ hr {
 
   .img-logo {
     max-width: 69px;
-  }
-
-  .burger {
-    display: block;
   }
 
   .header-item1 {
@@ -845,11 +835,6 @@ hr {
 
   .service-cards {
     grid-template-columns: 100%;
-  }
-
-  .single-card-item {
-    max-width: 420px;
-    height: 100%;
   }
 
   .fortablet {
