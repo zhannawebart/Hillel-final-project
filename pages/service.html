@@ -90,7 +90,7 @@
                         lawyer. And we know very well how difficult it is to find a good candidate with experience in
                         the field of information technology in Ukraine.
                     </p>
-                    <a href="#" class="consultation-btn">Free consultation</a>
+                    <a href="#" class="consultation-btn popup-button">Free consultation</a>
                 </div>
             </section>
             <section class="service-aria">
@@ -243,6 +243,50 @@
         </div>
 
     </footer>
+
+    <!--POP UP:-->
+
+    <div class="popup-wrapper">
+        <div id="#myWindow" class="popup-window active">
+            <p class="form-title">We would like to help you</p>
+            <span class="close">&times;</span>
+
+            <form action="https://fom.in.ua/echo" method="post">
+
+                <div class="">
+                    <label>
+                        <input class="name input" type="text" name="name" placeholder="Name" id="name">
+                    </label>
+                </div>
+                <div class="">
+                    <label>
+                        <textarea class="message-input" placeholder="Message" name="message"></textarea>
+                    </label>
+                </div>
+
+
+                <div class="input-gap">
+                    <p class="form-question">How to answer you?</p>
+
+                    <div class="">
+                        <label>
+                            <input class="phone input" type="number" name="number" placeholder="Phone number"
+                                id="phone">
+                        </label>
+                    </div>
+                    <div class="">
+                        <label>
+                            <input class="email input" type="email" name="email" placeholder="Email" id="email">
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <button class="form-btn" type="submit">Send message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script src="../assets/jquery/jquery-3.7.1.js"></script>
     <script src="../js/script.js"></script>
 </body>
