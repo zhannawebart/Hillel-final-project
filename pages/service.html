@@ -26,7 +26,12 @@
                             </div>
 
                             <div class="burger">
-                                <span class=""><img src="../images/Hamburger-light.svg" alt="burger"></span>
+                                <svg width="32" height="33" viewBox="0 0 32 33" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 10.5H25" stroke="white" stroke-width="2" />
+                                    <path d="M7 16.5H25" stroke="white" stroke-width="2" />
+                                    <path d="M7 22.5H25" stroke="white" stroke-width="2" />
+                                </svg>
                             </div>
                         </div>
 
@@ -90,7 +95,9 @@
                         lawyer. And we know very well how difficult it is to find a good candidate with experience in
                         the field of information technology in Ukraine.
                     </p>
-                    <a href="#" class="consultation-btn popup-button">Free consultation</a>
+
+                    <button class="consultation-btn popup-button" data-target="#myWindow">Free consultation</button>
+
                 </div>
             </section>
             <section class="service-aria">
@@ -247,7 +254,7 @@
     <!--POP UP:-->
 
     <div class="popup-wrapper">
-        <div id="#myWindow" class="popup-window active">
+        <div id="myWindow" class="popup-window">
             <p class="form-title">We would like to help you</p>
             <span class="close">&times;</span>
 

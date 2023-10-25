@@ -12,7 +12,7 @@ $('.burger').click(function () {
 $('.popup-button').click(function () {
     $('.popup-wrapper').addClass('active');
     const target = $(this).data('target');
-    $(target).addClass('active')
+    $(target).addClass('active');
 })
 /*чтобы закрыть попап:*/
 $('.popup-wrapper, .popup-window .close').click(function (event) {
