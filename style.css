@@ -228,7 +228,7 @@ body {
   margin-bottom: 30px;
 }
 
-/*-----SECOND SECTION TABS------*/
+/*-----SECOND SECTION - TABS------*/
 
 /*vertical tab line:*/
 .second-section {
@@ -252,10 +252,14 @@ body {
 .tab-btn-style {
   font-family: "Montserrat", sans-serif;
   color: var(--grey-text, #b3b3ba);
-  font-size: 2.38rem;
+  font-size: 2.36rem;
   font-weight: 700;
   text-align: end;
 }
+
+/*.nav-link:active {
+  background-color: transparent;
+}*/
 
 .nav-link:hover {
   background: var(
@@ -277,11 +281,17 @@ body {
   -webkit-text-fill-color: transparent;
 }*/
 
-.tab-pane {
-  max-width: 860px;
+.nav-pills .nav-link.active,  /*чтобы перебить стили бутстреп*/
+.nav-pills .show > .nav-link {
+  background-color: transparent;
+}
+
+.tab-content .box-width {
+  max-width: 861px;
   font-family: "Montserrat", sans-serif;
 }
 .tab-pane h3 {
+  margin-bottom: 30px;
   font-size: 1.88rem;
   font-weight: 700;
 }
@@ -630,13 +640,14 @@ hr {
   }
 
   /*----second-section-tabs:----*/
-  .tab-pane {
-    max-width: 580px;
+  .tab-content .box-width {
+    max-width: 525px;
   }
 
   /*----slider-section:----*/
   .slide .slider-image {
-    height: 100%;
+    align-self: stretch; /*чтобы фото растянулось по всей высоте контейнера*/
+    object-fit: cover;
   }
 
   /*----company-logos-section----*/
@@ -653,11 +664,24 @@ hr {
   }
 }
 
+@media (max-width: 1050px) {
+  /*----second-section-tabs:----*/
+  .tab-content .box-width {
+    max-width: 405px;
+  }
+}
+
 @media (max-width: 1024px) {
   .main-container,
   .smaller-container {
     padding-left: 60px;
     padding-right: 60px;
+  }
+
+  /*----second-section-tabs:----*/
+  .content-block .wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -694,6 +718,10 @@ hr {
     flex-direction: column;
   }
 
+  .tab-content .box-width {
+    max-width: 648px;
+  }
+
   .second-section .tab-line {
     width: 100%;
     height: 4px;
@@ -702,7 +730,7 @@ hr {
 
   /*.wrapper .flex-row-mobile {
     display: flex;
-    flex-direction: row;
+    flex-direction: row !important;
     flex-wrap: nowrap;
 
     /*position: absolute;
@@ -712,10 +740,6 @@ hr {
     padding-left: 1rem;
     padding-right: 1rem;
   }*/
-
-  .tab-pane {
-    max-width: 648px;
-  }
 
   /*.second-section .nav-pills {
     position: absolute;
@@ -732,6 +756,7 @@ hr {
 
   /*-----third section-icons block---*/
   .icon-cards-wrapper {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
   }
@@ -742,9 +767,9 @@ hr {
   }
 
   .slide .slider-image {
-    width: 100%;
+    max-width: 100%;
+    max-height: 500px;
     border-radius: 12px 12px 0 0;
-    /*object-fit: cover;*/
   }
 
   /*----company-logos-section----*/
@@ -803,6 +828,8 @@ hr {
     display: flex;
     justify-content: space-between;
     margin-top: 12px;
+    margin-left: -1rem;
+    margin-right: -1rem;
   }
 
   .header-item2 {
@@ -814,8 +841,8 @@ hr {
     margin-top: -50px;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-left: -1rem;
-    margin-right: -1rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
   }
 
   .lang-buttons {
@@ -841,10 +868,11 @@ hr {
     display: block;
     width: 30px;
     height: 30px;
-    margin-left: auto;
+    /*margin-left: auto;*/
     position: relative;
     z-index: 7;
   }
+
   .nav-menu {
     position: fixed;
     inset: 0;
@@ -892,14 +920,34 @@ hr {
     margin: 30px 0;
   }
 
+  .tab-content .box-width {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .tab-btn-style {
     font-size: 1.88rem;
   }
 
+  .tab-pane h3 {
+    font-size: 1.5rem;
+  }
+
   /*-----third section-icons block---*/
+  .third-section-icons .main-container .icons-title {
+    margin-top: 10px;
+    margin-bottom: -20px;
+  }
+
   .icon-cards-wrapper {
+    display: grid;
     grid-template-columns: 100%;
     gap: 30px;
+  }
+
+  /*----slider-section----*/
+  .slider-section {
+    margin-top: 30px;
   }
 
   /*----company-logos-section----*/
