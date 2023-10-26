@@ -106,6 +106,10 @@ body {
   border-radius: 50%;
 }
 
+img {
+  max-width: 100%;
+}
+
 /*-----HEADER-------*/
 
 /*aut0 - чтобы слова меню не сжимались при сужении экрана , а контейнер нормально сужался*/
@@ -470,6 +474,7 @@ body {
 /*----SERVICE CARDS SECTION----*/
 
 .service-card-section {
+  margin-top: 60px;
   background-color: var(--footer-bg-color);
   padding-top: 30px;
 }
@@ -509,6 +514,9 @@ span {
   border-radius: 8px;
   background-color: var(--bg-basic-color);
 }
+/*.single-card-item img {
+  width: 100%;
+}*/
 .card-content-pad {
   padding: 30px;
 }
@@ -662,29 +670,24 @@ hr {
   }
 
   /*---service-card-section----*/
-  .single-card-item img {
+  /*.single-card-item img {
     width: 100%;
-  }
+  }*/
 }
 
 @media (max-width: 1050px) {
   /*----second-section-tabs:----*/
-  .tab-content .box-width {
-    max-width: 405px;
+  .content-block .wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
 @media (max-width: 1024px) {
   .main-container,
   .smaller-container {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-
-  /*----second-section-tabs:----*/
-  .content-block .wrapper {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    /*padding-left: 60px;
+    padding-right: 60px;*/
   }
 }
 
@@ -746,15 +749,6 @@ hr {
     max-width: calc(100vw) !important;*/
   }
 
-  /*.second-section .nav-pills {
-    position: absolute;
-    transform: translateX(6px);
-    overflow-x: auto;
-    max-width: calc(100vw) !important;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }*/
-
   /*-----third section-icons block---*/
   .icon-cards-wrapper {
     display: grid;
@@ -769,7 +763,7 @@ hr {
 
   .slide .slider-image {
     max-width: 100%;
-    max-height: 500px;
+    height: 500px;
     border-radius: 12px 12px 0 0;
   }
 
@@ -781,6 +775,10 @@ hr {
   /*---service-card-section----*/
   .service-cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .single-card-item .img-mob {
+    width: 100%;
   }
 
   .fortablet {
@@ -803,10 +801,9 @@ hr {
 
 @media (max-width: 620px) {
   /*----header:----*/
-  .main-container,
-  .smaller-container {
+  .main-container {
     padding-left: 30px;
-    padding-right: 60px;
+    padding-right: 30px;
   }
 
   .header-item1 {
@@ -827,7 +824,7 @@ hr {
     padding-top: 10px;
     padding-bottom: 10px;
     margin-left: -2rem;
-    margin-right: -2rem;
+    margin-right: -4rem;
   }
 
   .lang-buttons {

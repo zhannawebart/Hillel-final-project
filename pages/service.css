@@ -65,6 +65,10 @@ body {
   position: relative;
 }
 
+img {
+  max-width: 100%;
+}
+
 .display-flex {
   display: flex;
 }
@@ -459,7 +463,6 @@ span {
 .single-card {
   border-radius: 8px;
   background-color: var(--bg-basic-color);
-  /*height: 430px;*/
 }
 .card-content {
   padding: 30px;
@@ -577,21 +580,6 @@ hr {
     padding-right: 180px;
   }
 
-  /*.smaller-container {
-    /*max-width: 1080px;
-    padding-left: 180px;
-    padding-right: 180px;
-  }*/
-
-  /*.h3-title {
-    text-align: start;
-  }*/
-
-  /*---service-card-section----*/
-  .single-card img {
-    width: 100%;
-  }
-
   /*----SERVICE AREA SECTION----*/
   .services-aria-block {
     grid-template-columns: repeat(2, 510px);
@@ -647,6 +635,10 @@ hr {
   /*---service-card-section----*/
   .service-cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .single-card-item img {
+    width: 100%;
   }
 
   .fortablet {
