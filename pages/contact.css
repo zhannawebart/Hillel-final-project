@@ -583,7 +583,6 @@ hr {
     flex-direction: column;
     font-size: 1.5rem;
     background-color: #fff;
-    /*max-width: 350px;*/
     border-radius: 0.5rem;
     height: 100%;
     transition: all 0.3s linear;
