@@ -121,6 +121,11 @@ body {
   padding-top: 50px;
 }
 
+.menu {
+  display: flex;
+  gap: 15px;
+}
+
 .page-name {
   color: #323264;
   font-size: 2.3rem;
@@ -451,12 +456,9 @@ body {
     height: 100%;
     transition: all 0.3s linear;
     transform: translateY(0);
-    padding-top: 90px !important;
+    padding-top: 110px !important;
     padding-left: 12px;
     padding-right: 12px;
-  }
-  .nav .menu > a {
-    margin-top: 15px;
   }
 
   .nav.active .menu {
